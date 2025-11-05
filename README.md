@@ -1,40 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Bobobox — Take-Home Assignment
 
-## Getting Started
+Built with Next.js, Tailwind CSS, and Alpine.js.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project was built as part of a take-home assignment to demonstrate:
+1. Dynamic DOM manipulation using Alpine.js.
+2. API data rendering using fetch with React Hooks.
+3. Clean, complex, and responsive form design using Tailwind CSS.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Features
+### Alpine.js Carousel
+- Integrated Alpine.js with Next.js via <script> and ref initialisation.
+- Fully interactive carousel with:
+    - Auto-advance every 3 seconds.
+    - Smooth transitions and fade animations.
+    - Manual navigation buttons and indicators.
+    - Responsive design across devices.
+    - Uses placeholder images from Picsum Photos.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Company List (Table View)
+- Fetches company data from mock API:
+- [`https://json-placeholder.mock.beeceptor.com/companies`](https://json-placeholder.mock.beeceptor.com/companies)
+- Implements loading, success, and error states with useState + useEffect.
+- Includes:
+    - Search/filter functionality.
+    - Responsive table view (desktop) and card view (mobile).
+    - Clean, professional styling with translucent backgrounds and blur effects.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+> Note:
+- The provided API does not include fields such as Founded Year or Headquarters City as required in the brief. Therefore, the displayed columns are Name, Industry, Country, and Address, which closely match the available data.
+- Alpine.js is intentionally used here to demonstrate lightweight, declarative DOM manipulation within a mostly-React/Next app. While Alpine.js integrates and functions correctly for the carousel, it’s not the conventional pairing for a React-first codebase. Using it is a pragmatic choice for this assignment but may not be ideal for larger, production React apps where React-native solutions are preferred.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Company Registration Form
+- Includes all requested components:
+    - Company Name (text input)
+    - Industry Sector (dropdown)
+    - Employee Size (radio group)
+    - Contact Email (text input)
+    - Headquarters City (text input)
+    - Terms & Conditions checkbox
+    - Submit button
+- Form state and validation are intentionally omitted (per assignment spec).
 
-## Learn More
+## View Switching
+- Users can toggle between Company List and Company Registration views using a simple, elegant tab system with animated active states.
 
-To learn more about Next.js, take a look at the following resources:
+## Responsiveness
+- Fully responsive on mobile, tablet, and desktop.
+- Adaptive layouts:
+    - Table switches to card list on smaller screens.
+    - Carousel adjusts its height accordingly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## Aesthetics
+- Professional modern theme inspired by Apple Glassmorphism.
+- Smooth animations and consistent spacing for clean UI flow.
