@@ -64,7 +64,7 @@ export default function Home() {
           </p>
         </header>
 
-        {/* Alpine.js Carousel Component */}
+        {/* Carousel */}
         <section className="mb-12 rounded-2xl overflow-hidden shadow-xl" ref={alpineRef}>
           <div 
             className="relative w-full h-64 md:h-96 overflow-hidden"
@@ -118,7 +118,6 @@ export default function Home() {
                     </div>
                   </template>
 
-                  <!-- Indicators -->
                   <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
                     <template x-for="(image, i) in images" :key="i">
                       <button 
@@ -129,7 +128,6 @@ export default function Home() {
                     </template>
                   </div>
 
-                  <!-- Navigation -->
                   <button 
                     @click="current = current === 0 ? images.length - 1 : current - 1"
                     class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full px-3 py-1 transition-all"
@@ -380,20 +378,6 @@ export default function Home() {
           )}
         </div>
       </main>
-
-      <style jsx>{`
-        @keyframes spin {
-          to {
-            transform: rotate(360deg);
-          }
-        }
-        .animation-delay-150 {
-          animation-delay: 150ms;
-        }
-        .animate-spin {
-          animation: spin 1s linear infinite;
-        }
-      `}</style>
     </div>
   )
 }
